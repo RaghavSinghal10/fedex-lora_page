@@ -148,7 +148,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Low-Rank Adaptation (LoRA) is a popular technique for efficient fine-tuning of foundation models. However, applying LoRA in federated learning environments,
+where data is distributed across multiple clients, presents unique challenges. Exist-
+ing methods rely on traditional federated averaging of LoRA adapters, resulting in
+inexact updates. To address this, we propose Federated Exact LoRA, or FedEx-
+LoRA, which adds a residual error term to the pretrained frozen weight matrix.
+Our approach achieves exact updates with minimal computational and communica-
+tion overhead, preserving LoRA’s efficiency. We evaluate the method on various
+Natural Language Understanding (NLU) and Natural Language Generation (NLG)
+tasks, showing consistent performance gains over state-of-the-art methods across
+multiple settings. Through extensive analysis, we quantify that the deviations in
+updates from the ideal solution are significant, highlighting the need for exact ag-
+gregation. Our method’s simplicity, efficiency, and broad applicability position it as
+a promising solution for accurate and effective federated fine-tuning of foundation
+models.
           </p>
         </div>
       </div>
