@@ -272,13 +272,15 @@
       </div>
 
       <!-- Carousel item 2 -->
-      <div class="item" style="display: flex; justify-content: center; align-items: center;">
-        <div class="carousel-content">
-          <img src="static/images/rounds_a0_l10_r1.png" alt="RoBERTa-large on GLUE">
-          <h2 class="subtitle has-text-centered main-caption">
-            Scaled Frobenius norm of divergence/deviation of updates with conventional federated
-            aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
-            various datasets. We present results for the average of query and value matrices across all layers.   
+      <div class="item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%;">
+        <div class="carousel-content" style="max-width: 80%; margin: 0 auto;">
+          <!-- Centering the image -->
+          <img src="static/images/rounds_a0_l10_r1.png" alt="RoBERTa-large on GLUE" style="display: block; max-width: 100%; height: auto; margin: 0 auto;">
+      
+          <!-- Caption -->
+          <h2 class="subtitle has-text-centered main-caption" style="margin-top: 20px; font-size: 1.1em; line-height: 1.5; text-align: justify;">
+            Scaled Frobenius norm of divergence/deviation of updates with conventional federated aggregation (FedAvg) versus ideal LoRA updates, 
+            computed across multiple aggregation rounds for various datasets. We present results for the average of query and value matrices across all layers.
           </h2>
         </div>
       </div>
