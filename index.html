@@ -255,7 +255,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Results</h2>
+    <h2 class="title is-3 has-text-centered">Deviation/Divergence Analysis</h2>
 
     <!-- Carousel wrapper -->
     <div id="fedex-lora-carousel" class="carousel results-carousel">
@@ -264,7 +264,9 @@
         <div class="carousel-content">
           <img src="static/images/mrpc_r1.png" alt="RoBERTa-base on GLUE">
           <h2 class="subtitle has-text-centered main-caption">
-            RoBERTa-base on GLUE
+            Scaled Frobenius norm of divergence/deviation of updates with conventional federated
+            aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
+            various datasets. We present results for query matrices from the first layer.
           </h2>
         </div>
       </div>
@@ -274,7 +276,9 @@
         <div class="carousel-content">
           <img src="static/images/rounds_a0_l10_r1.png" alt="RoBERTa-large on GLUE">
           <h2 class="subtitle has-text-centered main-caption">
-            RoBERTa-large on GLUE
+            Scaled Frobenius norm of divergence/deviation of updates with conventional federated
+            aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
+            various datasets. We present results for the average of query and value matrices across all layers.   
           </h2>
         </div>
       </div>
@@ -293,8 +297,11 @@
     <!-- Caption description below -->
     <div class="content has-text-justified mt-4">
       <p>
-        Centralized LoRA (in grey) sets the benchmark skyline for its federated versions. Best results among federated methods (in blue) are
-        highlighted in bold for each setting. FedEx-LoRA consistently outperforms existing methods across various tasks and settings.
+      We measure the scaled Frobenius norm of the divergence between the updates produced by FedAvg and 
+      the ideal LoRA updates, revealing several notable patterns. We observe that (1) the deviations decrease as the model
+      depth increases, (2) the deviation grows with a higher number of local epochs, (3) the deviation
+      is more pronounced in the query (Q) matrices compared to the value (V) matrices, (4) the deviation consistently decreases as the number of aggregation rounds increases, both for the
+      first-layer query matrix and for the average of the query and value matrices across all layers.
       </p>
     </div>
   </div>
