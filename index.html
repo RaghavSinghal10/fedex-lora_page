@@ -252,38 +252,48 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Results</h2>
-    
+
     <!-- Carousel wrapper -->
     <div id="fedex-lora-carousel" class="carousel results-carousel">
       <!-- Carousel item 1 -->
       <div class="item">
-          <img src="static/images/results-glue-1.jpg" alt="Traditional FL method">
-          <h2 class="subtitle has-text-centered">
+        <div class="carousel-content">
+          <img src="static/images/results-glue-1.jpg" alt="RoBERTa-base on GLUE">
+          <h2 class="subtitle has-text-centered main-caption">
             RoBERTa-base on GLUE
           </h2>
+        </div>
       </div>
 
-      <!-- Carousel item 1 -->
+      <!-- Carousel item 2 -->
       <div class="item">
-        <img src="static/images/results-glue-2.jpg" alt="Traditional FL method">
-        <h2 class="subtitle has-text-centered">
-          RoBERTa-large on GLUE
-        </h2>
-    </div>
+        <div class="carousel-content">
+          <img src="static/images/results-glue-2.jpg" alt="RoBERTa-large on GLUE">
+          <h2 class="subtitle has-text-centered main-caption">
+            RoBERTa-large on GLUE
+          </h2>
+        </div>
+      </div>
 
-      <!-- Carousel item 1 -->
+      <!-- Carousel item 3 -->
       <div class="item">
-        <img src="static/images/results-nlg.jpg" alt="Traditional FL method">
-        <h2 class="subtitle has-text-centered">
-          GPT-2 on E2E-NLG
-        </h2>
+        <div class="carousel-content">
+          <img src="static/images/results-nlg.jpg" alt="GPT-2 on E2E-NLG">
+          <h2 class="subtitle has-text-centered main-caption">
+            GPT-2 on E2E-NLG
+          </h2>
+        </div>
+      </div>
     </div>
 
     <!-- Caption description below -->
     <div class="content has-text-justified mt-4">
       <p>
-        Centralized LoRA (in grey) sets the benchmark skyline for its federated versions. Best results among federated methods (in blue) are 
-        highlighted in bold for each setting. Higher is better for all metrics.
+        <strong>Figure 1:</strong> Comparison of federated methods: (a) Traditional FL transmits full model updates, leading to high communication costs. 
+        (b) FedIT averages the individual client low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, 
+        resulting in inexact updates but reducing communication. (c) FedEx-LoRA sends the error residual <strong>ΔW</strong><sub>res</sub>
+        along with the individual adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, which is added to the pretrained weight matrix <strong>W</strong><sub>0</sub>,
+        ensuring exact aggregation while maintaining low communication costs.
       </p>
     </div>
   </div>
