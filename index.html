@@ -206,9 +206,9 @@
 </section>
 
 
-<section class="section">
+<section class="section hero-is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Results</h2>
+    <h2 class="title is-3 has-text-centered">Comparisons with Baselines</h2>
 
     <!-- Carousel wrapper -->
     <div id="fedex-lora-carousel" class="carousel results-carousel">
@@ -264,8 +264,8 @@
         <img src="static/images/mrpc_r1.png" alt="RoBERTa-base on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
         <h2 class="subtitle has-text-centered main-caption", style="text-align: left;">
           Scaled Frobenius norm of divergence/deviation of updates with conventional federated
-          aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
-          various datasets. We present results for query matrices from the first layer.
+          aggregation (FedAvg) versus ideal LoRA updates, computed after the first aggregation step. We
+          plot for query (Q) and value (V) matrices across model layers.
         </h2>
       </div>
 
@@ -273,9 +273,9 @@
       <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <img src="static/images/rounds_a0_l10_r1.png" alt="RoBERTa-large on GLUE" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
         <h2 class="subtitle has-text-centered main-caption" style="text-align: left;">
-          Scaled Frobenius norm of divergence/deviation of updates with conventional federated
+          Scaled Frobenius norm of divergence of updates with conventional federated
           aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
-          various datasets. We present results for the average of query and value matrices across all layers.
+          various datasets. We present results for the query matrices of the first layer.
         </h2>
       </div>
 
@@ -283,7 +283,9 @@
       <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <img src="static/images/rounds_avg_l10_r1.png" alt="GPT-2 on E2E-NLG" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 10px;">
         <h2 class="subtitle has-text-centered main-caption" style="text-align: left;">
-          GPT-2 on E2E-NLG
+          Scaled Frobenius norm of divergence of updates with conventional federated
+          aggregation (FedAvg) versus ideal LoRA updates, computed across multiple aggregation rounds for
+          various datasets. We present results for the average of the query and value matrices across all layers.
         </h2>
       </div>
     </div>
