@@ -173,77 +173,44 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Image section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Why FedEx-LoRA?</h2>
-    <figure>
-      <div class="columns is-centered">
-        <div class="column">
-          <figure class="image">
-            <img src="static/images/fig1-left.png" alt="FedIT method">
-            <figcaption class="has-text-centered mt-2">
-              (a) FedIT (typical federated LoRA approaches)
-            </figcaption>
-          </figure>
-        </div>
-        <div class="column">
-          <figure class="image">
-            <img src="static/images/fig1-right.png" alt="FedEx-LoRA method">
-            <figcaption class="has-text-centered mt-2">
-              (b) FedEx-LoRA (our proposed method)
-            </figcaption>
-          </figure>
-        </div>
+    <div id="fedex-lora-carousel" class="carousel">
+      <div class="item">
+        <figure class="image">
+          <img src="static/images/results-glue-1.jpg" alt="Traditional FL method">
+          <figcaption class="has-text-centered mt-2">
+            (a) Traditional FL
+          </figcaption>
+        </figure>
       </div>
-      <figcaption class="has-text-justified mt-4">
-        Comparison of federated LoRA methods: (a) FedIT averages the individual client low-rank
-        adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, resulting in inexact updates. (b) FedEx-LoRA sends the error residual <strong>ΔW</strong><sub>res</sub>
-        along with the individual adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, which is added to the pretrained weight matrix <strong>W</strong><sub>0</sub>,
-        ensuring exact aggregation. Clients transmit low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub> in both methods.
-      </figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Results</h2>
-    <figure>
-      <div class="columns is-centered">
-        <div class="column">
-          <figure class="image">
-            <img src="static/images/results-glue-1.jpg" alt="Traditional FL method">
-            <figcaption class="has-text-centered mt-2">
-              (a) Traditional FL
-            </figcaption>
-          </figure>
-        </div>
-        <div class="column">
-          <figure class="image">
-            <img src="static/images/results-glue-2.jpg" alt="FedIT method">
-            <figcaption class="has-text-centered mt-2">
-              (b) FedIT (typical federated LoRA approaches)
-            </figcaption>
-          </figure>
-        </div>
-        <div class="column">
-          <figure class="image">
-            <img src="static/images/results-nlg.jpg" alt="FedEx-LoRA method">
-            <figcaption class="has-text-centered mt-2">
-              (c) FedEx-LoRA (our proposed method)
-            </figcaption>
-          </figure>
-        </div>
+      <div class="item">
+        <figure class="image">
+          <img src="static/images/results-glue-2.jpg" alt="FedIT method">
+          <figcaption class="has-text-centered mt-2">
+            (b) FedIT (typical federated LoRA approaches)
+          </figcaption>
+        </figure>
       </div>
-      <figcaption class="has-text-justified mt-4">
-        Comparison of federated methods: (a) Traditional FL transmits full model updates, leading to high communication costs. 
+      <div class="item">
+        <figure class="image">
+          <img src="static/images/results-nlg.jpg" alt="FedEx-LoRA method">
+          <figcaption class="has-text-centered mt-2">
+            (c) FedEx-LoRA (our proposed method)
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="content has-text-justified mt-4">
+      <p>
+        <strong>Figure 1:</strong> Comparison of federated methods: (a) Traditional FL transmits full model updates, leading to high communication costs. 
         (b) FedIT averages the individual client low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, 
         resulting in inexact updates but reducing communication. (c) FedEx-LoRA sends the error residual <strong>ΔW</strong><sub>res</sub>
         along with the individual adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, which is added to the pretrained weight matrix <strong>W</strong><sub>0</sub>,
         ensuring exact aggregation while maintaining low communication costs. Clients transmit low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub> in both LoRA-based methods (b and c).
-      </figcaption>
-    </figure>
+      </p>
+    </div>
   </div>
 </section>
 
