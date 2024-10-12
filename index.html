@@ -179,16 +179,23 @@
     <div class="columns is-centered">
       <div class="column">
         <figure class="image">
-          <img src="static/images/fig1-left.png alt="Description of left image">
+          <img src="static/images/fig1-left.png" alt="FedIT (typical federated LoRA approaches)">
         </figure>
       </div>
       <div class="column">
         <figure class="image">
-          <img src="static/images/fig1-right.png" alt="Description of right image">
+          <img src="static/images/fig1-right.png" alt="FedEx-LoRA (ours) ">
         </figure>
       </div>
     </div>
-  </div>
+    <figcaption class="has-text-centered mt-4">
+      <strong>Figure 1:</strong> Comparison of federated LoRA methods: (a) FedIT (typical approaches) averages the individual client low-rank
+      adapters A<sub>i</sub> and B<sub>i</sub>, resulting in inexact updates. (b) FedEx-LoRA sends the error residual ΔW<sub>res</sub>
+      along with the individual adapters A<sub>i</sub> and B<sub>i</sub>, which is added to the pretrained weight matrix W<sub>0</sub>,
+      ensuring exact aggregation. Clients transmit low-rank adapters A<sub>i</sub> and B<sub>i</sub> in both methods.
+    </figcaption>
+  </figure>
+</div>
 </section>
 <!-- End image section -->
 
