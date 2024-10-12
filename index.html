@@ -176,26 +176,33 @@
 <!-- Image section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column">
-        <figure class="image">
-          <img src="static/images/fig1-left.png" alt="FedIT (typical federated LoRA approaches)">
-        </figure>
+    <figure>
+      <div class="columns is-centered">
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/left_image.jpg" alt="FedIT method">
+            <figcaption class="has-text-centered mt-2">
+              (a) FedIT (typical Federated LoRA approaches)
+            </figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/right_image.jpg" alt="FedEx-LoRA method">
+            <figcaption class="has-text-centered mt-2">
+              (b) FedEx-LoRA (our proposed method)
+            </figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="column">
-        <figure class="image">
-          <img src="static/images/fig1-right.png" alt="FedEx-LoRA (ours) ">
-        </figure>
-      </div>
-    </div>
-    <figcaption class="has-text-centered mt-4">
-      <strong>Figure 1:</strong> Comparison of federated LoRA methods: (a) FedIT (typical approaches) averages the individual client low-rank
-      adapters A<sub>i</sub> and B<sub>i</sub>, resulting in inexact updates. (b) FedEx-LoRA sends the error residual ΔW<sub>res</sub>
-      along with the individual adapters A<sub>i</sub> and B<sub>i</sub>, which is added to the pretrained weight matrix W<sub>0</sub>,
-      ensuring exact aggregation. Clients transmit low-rank adapters A<sub>i</sub> and B<sub>i</sub> in both methods.
-    </figcaption>
-  </figure>
-</div>
+      <figcaption class="has-text-justified mt-4">
+        <strong>Figure 1:</strong> Comparison of federated LoRA methods: (a) FedIT averages the individual client low-rank
+        adapters A<sub>i</sub> and B<sub>i</sub>, resulting in inexact updates. (b) FedEx-LoRA sends the error residual ΔW<sub>res</sub>
+        along with the individual adapters A<sub>i</sub> and B<sub>i</sub>, which is added to the pretrained weight matrix W<sub>0</sub>,
+        ensuring exact aggregation. Clients transmit low-rank adapters A<sub>i</sub> and B<sub>i</sub> in both methods.
+      </figcaption>
+    </figure>
+  </div>
 </section>
 <!-- End image section -->
 
