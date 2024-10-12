@@ -207,41 +207,47 @@
 
 
 
-<!-- End image section -->
-
-</section> -->
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item"> -->
-        <!-- Your image here -->
-        <img src="static/images/results-glue-1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Image carousel section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <div id="fedex-lora-carousel" class="carousel results-carousel">
+      <div class="item">
+        <figure class="image">
+          <img src="static/images/results-glue-1.jpg" alt="Traditional FL method">
+          <figcaption class="has-text-centered mt-2">
+            (a) Traditional FL
+          </figcaption>
+        </figure>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/results-glue-2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+        <figure class="image">
+          <img src="static/images/results-glue-2.jpg" alt="FedIT method">
+          <figcaption class="has-text-centered mt-2">
+            (b) FedIT (typical federated LoRA approaches)
+          </figcaption>
+        </figure>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/results-nlg.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
+        <figure class="image">
+          <img src="static/images/results-nlg.jpg" alt="FedEx-LoRA method">
+          <figcaption class="has-text-centered mt-2">
+            (c) FedEx-LoRA (our proposed method)
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="content has-text-justified mt-4">
+      <p>
+        <strong>Figure 1:</strong> Comparison of federated methods: (a) Traditional FL transmits full model updates, leading to high communication costs. 
+        (b) FedIT averages the individual client low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, 
+        resulting in inexact updates but reducing communication. (c) FedEx-LoRA sends the error residual <strong>ΔW</strong><sub>res</sub>
+        along with the individual adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub>, which is added to the pretrained weight matrix <strong>W</strong><sub>0</sub>,
+        ensuring exact aggregation while maintaining low communication costs. Clients transmit low-rank adapters <strong>A</strong><sub>i</sub> and <strong>B</strong><sub>i</sub> in both LoRA-based methods (b and c).
+      </p>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel
-
 
 
 
